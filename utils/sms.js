@@ -2,7 +2,7 @@ const got = require('got');
 
 const sendSMS = async (recipient, message) => {
     const data = {
-        sender: "EstateWatch",
+        sender: "OTEstate",
         recipient: recipient,
         message: message,
     };
@@ -18,10 +18,10 @@ const sendSMS = async (recipient, message) => {
         })
 
         if (response.body) {
-            const res = {
-                message: 'sms sent to user',
-                status: 200,
-            };
+            // const res = {
+            //     message: 'sms sent to user',
+            //     status: 200,
+            // };
 
             return JSON.parse(response.body);
         }
